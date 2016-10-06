@@ -29,7 +29,7 @@ class RelayService:
     def __read_config_file(self):
         # try:
         conf = {}
-        execfile("/home/pi/relayservice/config/relayservice.conf", conf)
+        execfile("/home/pi/relaycontroller/config/relayservice.conf", conf)
         self.input_signal_gpio_port = conf["input_signal_gpio_port"]
         self.relay_control_gpio_port = conf["relay_control_gpio_port"]
         self.relay_alive_time = conf["relay_alive_time"]
