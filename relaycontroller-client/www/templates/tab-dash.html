@@ -15,9 +15,9 @@
     </button>
 
     <ion-list>
-      <ion-radio ng-repeat="state in states" ng-value="state.value" ng-model="currentState" >{{state.name}}</ion-radio>
+      <ion-radio ng-repeat="state in states" ng-value="state.value" ng-model="selection.currentState" name="currentState">{{state.name}}</ion-radio>
     </ion-list>
-    <button class="button button-full button-balanced" ng-click="setState(currentState)">
+    <button class="button button-full button-balanced" ng-click="setState(selection.currentState)">
       Wybierz
     </button>
   </ion-content>

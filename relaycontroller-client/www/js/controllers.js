@@ -15,7 +15,8 @@ angular.module('starter.controllers', [])
       }
     }).then(function(response){
       //console.log(JSON.stringify(response));
-      $scope.currentState = response.data;
+      //$scope.currentState = response.data;
+      $scope.selection = {currentState: response.data.state};
 
     }, function(e){
       console.log('Error: '+e);
@@ -48,8 +49,7 @@ angular.module('starter.controllers', [])
           method: 'GET'
         }).then(function(response){
           //console.log(JSON.stringify(response));
-          $scope.currentState = 0;
-          $scope.currentState = response.data;
+          $scope.selection = {currentState: response.data};
 
 
       $http({
@@ -59,6 +59,9 @@ angular.module('starter.controllers', [])
         //console.log(JSON.stringify(response));
         $scope.states = null;
         $scope.states = response.data;
+        // var cs = $scope.currentState;
+        // $scope.currentState = 0;
+        // $scope.currentState = cs;
 
         loadingFinished();
 
